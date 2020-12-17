@@ -59,7 +59,7 @@ nav {
 
 nav a, nav a:visited {
     color: var(--text-primary);
-    padding: 0.90rem 0.5rem;
+    padding: 0.90rem 1rem;
     text-decoration: none;
 }
 
@@ -87,13 +87,68 @@ main {
     font-family: 'Roboto', sans-serif;
     grid-area: main;
     line-height: 1.5rem;
-    padding: 0 0.5rem;
+    padding: 1.5rem 1rem;
 }
 
 main img {
     display: block;
-    margin: 1.5rem auto;
-    
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input, textarea {
+    background-color: var(--bg-highlight);
+    border: 3px solid transparent;
+    border-radius: 1px;
+    box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.05);
+    caret-color: var(--accent-red);
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    margin-bottom: 25px;
+    outline: none;
+    padding: 0.50rem;
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    border: 3px solid var(--accent-cyan);
+    box-shadow: 0 0 6px 0 rgba(42,161,152, 0.25);
+    color: var(--accent-cyan);
+}
+
+input:hover, textarea:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.25);
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--text-secondary);
+    font-family: 'Ubuntu', sans-serif;
+    opacity: 1;
+}
+
+button {
+    align-self: center;
+    background-color: var(--bg-highlight);
+    border: none;
+    border-radius: 1px;
+    box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.05);
+    color: var(--text-primary);
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5rem;
+    outline: none;
+    padding: 0.5rem;
+    width: 75px;
+}
+
+button:focus, button:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.25);
+    color: var(--text-em);
 }
 
 footer {
@@ -104,12 +159,8 @@ footer {
 }
 
 @media (min-width: 640px) {
-    nav {
+    nav, section {
         margin: 0 auto;
         width: 40rem;
-    }
-    section {
-        margin: 0 auto;
-        width: 39.0rem;
     }
 }

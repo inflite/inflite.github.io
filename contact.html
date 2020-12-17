@@ -17,15 +17,21 @@
     <header>
         <nav>
             <a href="index.html" class="brand">Tom Tourwé</a>
-            <a href="contact.html" class="page">Contact</a>
+            <a href="contact.html" class="current page">Contact</a>
         </nav>
     </header>
     <main>
         <section>
-            <img src="static/rudolf.png" alt="" width="250">
-            <h1>Hello</h1>
-            <p>Welcome on my personal homepage! Feel free to send me a message using the form on
-                my <a href="contact.html">contact page</a>.</p>
+            <img src="static/letter.png" alt="" width="250">
+            <h1>Send me a message</h1>
+            <p>Have a question or just want to say hello? I'd love to hear from you. </p>
+            <form action="https://formspree.io/f/xleopboo" method="POST">
+                <input placeholder="Your email" type="email" name="_replyto" autofocus required maxlength="64">
+                <textarea placeholder="Your message" name="message" required autocomplete="off" maxlength="1024"
+                    rows="10"></textarea>
+                </label>
+                <button type="submit">Send</button>
+            </form>
         </section>
     </main>
     <footer>
